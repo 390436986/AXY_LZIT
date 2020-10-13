@@ -8,4 +8,4 @@
 
 # 此软件仅供交流学习，请勿做其他用途！
 
-## 联系作者
+## [联系作者](http://wpa.qq.com/msgrd?v=3&uin=3276735002&site=qq&menu=yes)
