@@ -30,123 +30,125 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button_登录 = new System.Windows.Forms.Button();
+            this.button_退出 = new System.Windows.Forms.Button();
+            this.label_目标IP = new System.Windows.Forms.Label();
+            this.label_账号 = new System.Windows.Forms.Label();
+            this.label_密码 = new System.Windows.Forms.Label();
+            this.textBox_ip = new System.Windows.Forms.TextBox();
+            this.textBox_账号 = new System.Windows.Forms.TextBox();
+            this.textBox_密码 = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.button_发送认证信息 = new System.Windows.Forms.Button();
+            this.label_状态 = new System.Windows.Forms.Label();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.button_获取IP地址 = new System.Windows.Forms.Button();
+            this.button_初始化模板 = new System.Windows.Forms.Button();
+            this.label_提示 = new System.Windows.Forms.Label();
+            this.button_使用说明 = new System.Windows.Forms.Button();
+            this.button_发送自定义消息 = new System.Windows.Forms.Button();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.显示窗口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.隐藏窗口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.textBox_session_id = new System.Windows.Forms.TextBox();
+            this.label_session_id = new System.Windows.Forms.Label();
+            this.button_下线该ID = new System.Windows.Forms.Button();
+            this.label_last_session_id = new System.Windows.Forms.Label();
+            this.label_session_id_success = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button12 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.button13 = new System.Windows.Forms.Button();
+            this.button_rich2清空 = new System.Windows.Forms.Button();
+            this.label_last_ip = new System.Windows.Forms.Label();
+            this.label_成功IP = new System.Windows.Forms.Label();
+            this.button_rich1清空 = new System.Windows.Forms.Button();
+            this.checkBox_保存账号 = new System.Windows.Forms.CheckBox();
+            this.button_加载上次成功id = new System.Windows.Forms.Button();
+            this.radioButton_密码登录 = new System.Windows.Forms.RadioButton();
+            this.radioButton_短信登录 = new System.Windows.Forms.RadioButton();
+            this.linkLabel_联系方式 = new System.Windows.Forms.LinkLabel();
+            this.button_获取短信验证码 = new System.Windows.Forms.Button();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
+            this.label_验证短信 = new System.Windows.Forms.Label();
+            this.button_查询学校 = new System.Windows.Forms.Button();
+            this.button_rich3清空 = new System.Windows.Forms.Button();
+            this.button_查询在线状态 = new System.Windows.Forms.Button();
+            this.button_清空缓存 = new System.Windows.Forms.Button();
+            this.checkBox_保存密码 = new System.Windows.Forms.CheckBox();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // button_登录
             // 
-            this.button1.Location = new System.Drawing.Point(12, 440);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 46);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "登录";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_登录.Location = new System.Drawing.Point(12, 440);
+            this.button_登录.Name = "button_登录";
+            this.button_登录.Size = new System.Drawing.Size(85, 46);
+            this.button_登录.TabIndex = 0;
+            this.button_登录.Text = "登录";
+            this.button_登录.UseVisualStyleBackColor = true;
+            this.button_登录.Click += new System.EventHandler(this.button_登录_Click);
             // 
-            // button2
+            // button_退出
             // 
-            this.button2.Location = new System.Drawing.Point(173, 440);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 46);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "退出";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button_退出.Location = new System.Drawing.Point(173, 440);
+            this.button_退出.Name = "button_退出";
+            this.button_退出.Size = new System.Drawing.Size(85, 46);
+            this.button_退出.TabIndex = 1;
+            this.button_退出.Text = "退出";
+            this.button_退出.UseVisualStyleBackColor = true;
+            this.button_退出.Click += new System.EventHandler(this.button_退出_Click);
             // 
-            // label1
+            // label_目标IP
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(13, 217);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 22);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "目标IP";
+            this.label_目标IP.AutoSize = true;
+            this.label_目标IP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label_目标IP.Location = new System.Drawing.Point(13, 217);
+            this.label_目标IP.Name = "label_目标IP";
+            this.label_目标IP.Size = new System.Drawing.Size(58, 22);
+            this.label_目标IP.TabIndex = 2;
+            this.label_目标IP.Text = "目标IP";
             // 
-            // label2
+            // label_账号
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(14, 277);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 22);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "账号";
+            this.label_账号.AutoSize = true;
+            this.label_账号.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
+            this.label_账号.Location = new System.Drawing.Point(14, 277);
+            this.label_账号.Name = "label_账号";
+            this.label_账号.Size = new System.Drawing.Size(42, 22);
+            this.label_账号.TabIndex = 3;
+            this.label_账号.Text = "账号";
             // 
-            // label3
+            // label_密码
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(12, 326);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 22);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "密码:";
+            this.label_密码.AutoSize = true;
+            this.label_密码.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
+            this.label_密码.Location = new System.Drawing.Point(12, 326);
+            this.label_密码.Name = "label_密码";
+            this.label_密码.Size = new System.Drawing.Size(47, 22);
+            this.label_密码.TabIndex = 4;
+            this.label_密码.Text = "密码:";
             // 
-            // textBox1
+            // textBox_ip
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 221);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 21);
-            this.textBox1.TabIndex = 5;
+            this.textBox_ip.Location = new System.Drawing.Point(113, 221);
+            this.textBox_ip.Name = "textBox_ip";
+            this.textBox_ip.Size = new System.Drawing.Size(145, 21);
+            this.textBox_ip.TabIndex = 5;
             // 
-            // textBox2
+            // textBox_账号
             // 
-            this.textBox2.Location = new System.Drawing.Point(113, 277);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(145, 21);
-            this.textBox2.TabIndex = 6;
+            this.textBox_账号.Location = new System.Drawing.Point(113, 277);
+            this.textBox_账号.Name = "textBox_账号";
+            this.textBox_账号.Size = new System.Drawing.Size(145, 21);
+            this.textBox_账号.TabIndex = 6;
             // 
-            // textBox3
+            // textBox_密码
             // 
-            this.textBox3.Location = new System.Drawing.Point(113, 326);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(145, 21);
-            this.textBox3.TabIndex = 7;
+            this.textBox_密码.Location = new System.Drawing.Point(113, 326);
+            this.textBox_密码.Name = "textBox_密码";
+            this.textBox_密码.PasswordChar = '*';
+            this.textBox_密码.Size = new System.Drawing.Size(145, 21);
+            this.textBox_密码.TabIndex = 7;
             // 
             // richTextBox1
             // 
@@ -159,25 +161,25 @@
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
-            // button3
+            // button_发送认证信息
             // 
-            this.button3.Location = new System.Drawing.Point(566, 184);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 46);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "发送认证消息";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button_发送认证信息.Location = new System.Drawing.Point(566, 184);
+            this.button_发送认证信息.Name = "button_发送认证信息";
+            this.button_发送认证信息.Size = new System.Drawing.Size(100, 46);
+            this.button_发送认证信息.TabIndex = 9;
+            this.button_发送认证信息.Text = "发送认证消息";
+            this.button_发送认证信息.UseVisualStyleBackColor = true;
+            this.button_发送认证信息.Click += new System.EventHandler(this.button_发送认证消息_Click);
             // 
-            // label4
+            // label_状态
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(286, 217);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 19);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "状态：";
+            this.label_状态.AutoSize = true;
+            this.label_状态.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Bold);
+            this.label_状态.Location = new System.Drawing.Point(286, 217);
+            this.label_状态.Name = "label_状态";
+            this.label_状态.Size = new System.Drawing.Size(51, 19);
+            this.label_状态.TabIndex = 10;
+            this.label_状态.Text = "状态：";
             // 
             // richTextBox2
             // 
@@ -192,55 +194,55 @@
             this.richTextBox2.Text = "";
             this.richTextBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.richTextBox2_MouseDown);
             // 
-            // button4
+            // button_获取IP地址
             // 
-            this.button4.Location = new System.Drawing.Point(152, 248);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(106, 23);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "获取本机地址";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button_获取IP地址.Location = new System.Drawing.Point(152, 248);
+            this.button_获取IP地址.Name = "button_获取IP地址";
+            this.button_获取IP地址.Size = new System.Drawing.Size(106, 23);
+            this.button_获取IP地址.TabIndex = 12;
+            this.button_获取IP地址.Text = "获取本机地址";
+            this.button_获取IP地址.UseVisualStyleBackColor = true;
+            this.button_获取IP地址.Click += new System.EventHandler(this.button_获取IP地址_Click);
             // 
-            // button5
+            // button_初始化模板
             // 
-            this.button5.Location = new System.Drawing.Point(387, 184);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 46);
-            this.button5.TabIndex = 13;
-            this.button5.Text = "初始化\r\n为认证信息模板";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button_初始化模板.Location = new System.Drawing.Point(387, 184);
+            this.button_初始化模板.Name = "button_初始化模板";
+            this.button_初始化模板.Size = new System.Drawing.Size(100, 46);
+            this.button_初始化模板.TabIndex = 13;
+            this.button_初始化模板.Text = "初始化\r\n为认证信息模板";
+            this.button_初始化模板.UseVisualStyleBackColor = true;
+            this.button_初始化模板.Click += new System.EventHandler(this.button_初始化认证模板_Click);
             // 
-            // label5
+            // label_提示
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("宋体", 15F);
-            this.label5.Location = new System.Drawing.Point(8, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(539, 20);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "发送自定义认证信息时请确保命令和格式正确,否则会卡加载";
+            this.label_提示.AutoSize = true;
+            this.label_提示.Font = new System.Drawing.Font("宋体", 15F);
+            this.label_提示.Location = new System.Drawing.Point(8, 9);
+            this.label_提示.Name = "label_提示";
+            this.label_提示.Size = new System.Drawing.Size(539, 20);
+            this.label_提示.TabIndex = 14;
+            this.label_提示.Text = "发送自定义认证信息时请确保命令和格式正确,否则会卡加载";
             // 
-            // button6
+            // button_使用说明
             // 
-            this.button6.Location = new System.Drawing.Point(771, 12);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "使用说明";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button_使用说明.Location = new System.Drawing.Point(771, 12);
+            this.button_使用说明.Name = "button_使用说明";
+            this.button_使用说明.Size = new System.Drawing.Size(75, 23);
+            this.button_使用说明.TabIndex = 15;
+            this.button_使用说明.Text = "使用说明";
+            this.button_使用说明.UseVisualStyleBackColor = true;
+            this.button_使用说明.Click += new System.EventHandler(this.button_使用说明_Click);
             // 
-            // button7
+            // button_发送自定义消息
             // 
-            this.button7.Location = new System.Drawing.Point(745, 184);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 46);
-            this.button7.TabIndex = 16;
-            this.button7.Text = "发送自定义消息（CMD）";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button_发送自定义消息.Location = new System.Drawing.Point(745, 184);
+            this.button_发送自定义消息.Name = "button_发送自定义消息";
+            this.button_发送自定义消息.Size = new System.Drawing.Size(100, 46);
+            this.button_发送自定义消息.TabIndex = 16;
+            this.button_发送自定义消息.Text = "发送自定义消息（CMD）";
+            this.button_发送自定义消息.UseVisualStyleBackColor = true;
+            this.button_发送自定义消息.Click += new System.EventHandler(this.button_发送自定义消息_Click);
             // 
             // notifyIcon1
             // 
@@ -280,50 +282,50 @@
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
-            // textBox4
+            // textBox_session_id
             // 
-            this.textBox4.Location = new System.Drawing.Point(186, 523);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(277, 21);
-            this.textBox4.TabIndex = 18;
+            this.textBox_session_id.Location = new System.Drawing.Point(186, 523);
+            this.textBox_session_id.Name = "textBox_session_id";
+            this.textBox_session_id.Size = new System.Drawing.Size(277, 21);
+            this.textBox_session_id.TabIndex = 18;
             // 
-            // label6
+            // label_session_id
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(101, 520);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 20);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "session_id:";
+            this.label_session_id.AutoSize = true;
+            this.label_session_id.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label_session_id.Location = new System.Drawing.Point(101, 520);
+            this.label_session_id.Name = "label_session_id";
+            this.label_session_id.Size = new System.Drawing.Size(79, 20);
+            this.label_session_id.TabIndex = 19;
+            this.label_session_id.Text = "session_id:";
             // 
-            // button8
+            // button_下线该ID
             // 
-            this.button8.Location = new System.Drawing.Point(496, 523);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 20;
-            this.button8.Text = "下线该ID";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button_下线该ID.Location = new System.Drawing.Point(496, 523);
+            this.button_下线该ID.Name = "button_下线该ID";
+            this.button_下线该ID.Size = new System.Drawing.Size(75, 23);
+            this.button_下线该ID.TabIndex = 20;
+            this.button_下线该ID.Text = "下线该ID";
+            this.button_下线该ID.UseVisualStyleBackColor = true;
+            this.button_下线该ID.Click += new System.EventHandler(this.button_下线该ID_Click);
             // 
-            // label7
+            // label_last_session_id
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(103, 500);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(155, 12);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "上次成功登录的session_id:";
+            this.label_last_session_id.AutoSize = true;
+            this.label_last_session_id.Location = new System.Drawing.Point(103, 500);
+            this.label_last_session_id.Name = "label_last_session_id";
+            this.label_last_session_id.Size = new System.Drawing.Size(155, 12);
+            this.label_last_session_id.TabIndex = 21;
+            this.label_last_session_id.Text = "上次成功登录的session_id:";
             // 
-            // label8
+            // label_session_id_success
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.Location = new System.Drawing.Point(258, 498);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 17);
-            this.label8.TabIndex = 22;
+            this.label_session_id_success.AutoSize = true;
+            this.label_session_id_success.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label_session_id_success.Location = new System.Drawing.Point(258, 498);
+            this.label_session_id_success.Name = "label_session_id_success";
+            this.label_session_id_success.Size = new System.Drawing.Size(0, 17);
+            this.label_session_id_success.TabIndex = 22;
             // 
             // button9
             // 
@@ -333,112 +335,112 @@
             this.button9.TabIndex = 23;
             this.button9.Text = "下线";
             this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button9.Click += new System.EventHandler(this.button_下线_Click);
             // 
-            // button10
+            // button_rich2清空
             // 
-            this.button10.Location = new System.Drawing.Point(771, 359);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(76, 29);
-            this.button10.TabIndex = 24;
-            this.button10.Text = "清空";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.button_rich2清空.Location = new System.Drawing.Point(771, 359);
+            this.button_rich2清空.Name = "button_rich2清空";
+            this.button_rich2清空.Size = new System.Drawing.Size(76, 29);
+            this.button_rich2清空.TabIndex = 24;
+            this.button_rich2清空.Text = "清空";
+            this.button_rich2清空.UseVisualStyleBackColor = true;
+            this.button_rich2清空.Click += new System.EventHandler(this.button_清空rich2_Click);
             // 
-            // label9
+            // label_last_ip
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 203);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 12);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "上次成功登陆的ip：";
+            this.label_last_ip.AutoSize = true;
+            this.label_last_ip.Location = new System.Drawing.Point(10, 203);
+            this.label_last_ip.Name = "label_last_ip";
+            this.label_last_ip.Size = new System.Drawing.Size(113, 12);
+            this.label_last_ip.TabIndex = 25;
+            this.label_last_ip.Text = "上次成功登陆的ip：";
             // 
-            // label10
+            // label_成功IP
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label10.Location = new System.Drawing.Point(129, 201);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 17);
-            this.label10.TabIndex = 26;
+            this.label_成功IP.AutoSize = true;
+            this.label_成功IP.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label_成功IP.Location = new System.Drawing.Point(129, 201);
+            this.label_成功IP.Name = "label_成功IP";
+            this.label_成功IP.Size = new System.Drawing.Size(0, 17);
+            this.label_成功IP.TabIndex = 26;
             // 
-            // button11
+            // button_rich1清空
             // 
-            this.button11.Location = new System.Drawing.Point(746, 148);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 30);
-            this.button11.TabIndex = 27;
-            this.button11.Text = "清空";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.button_rich1清空.Location = new System.Drawing.Point(771, 148);
+            this.button_rich1清空.Name = "button_rich1清空";
+            this.button_rich1清空.Size = new System.Drawing.Size(75, 30);
+            this.button_rich1清空.TabIndex = 27;
+            this.button_rich1清空.Text = "清空";
+            this.button_rich1清空.UseVisualStyleBackColor = true;
+            this.button_rich1清空.Click += new System.EventHandler(this.button_清空rich1_Click);
             // 
-            // checkBox1
+            // checkBox_保存账号
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(186, 304);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(72, 16);
-            this.checkBox1.TabIndex = 28;
-            this.checkBox1.Text = "保存账号";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox_保存账号.AutoSize = true;
+            this.checkBox_保存账号.Location = new System.Drawing.Point(186, 304);
+            this.checkBox_保存账号.Name = "checkBox_保存账号";
+            this.checkBox_保存账号.Size = new System.Drawing.Size(72, 16);
+            this.checkBox_保存账号.TabIndex = 28;
+            this.checkBox_保存账号.Text = "保存账号";
+            this.checkBox_保存账号.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // button_加载上次成功id
             // 
-            this.button12.Location = new System.Drawing.Point(12, 492);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(85, 50);
-            this.button12.TabIndex = 29;
-            this.button12.Text = "加载上次成功登录的IP和ID";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.button_加载上次成功id.Location = new System.Drawing.Point(12, 492);
+            this.button_加载上次成功id.Name = "button_加载上次成功id";
+            this.button_加载上次成功id.Size = new System.Drawing.Size(85, 50);
+            this.button_加载上次成功id.TabIndex = 29;
+            this.button_加载上次成功id.Text = "加载上次成功登录的IP和ID";
+            this.button_加载上次成功id.UseVisualStyleBackColor = true;
+            this.button_加载上次成功id.Click += new System.EventHandler(this.button_加载上次成功ID_Click);
             // 
-            // radioButton1
+            // radioButton_密码登录
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 372);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(71, 16);
-            this.radioButton1.TabIndex = 32;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "密码登录";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton_密码登录.AutoSize = true;
+            this.radioButton_密码登录.Location = new System.Drawing.Point(12, 372);
+            this.radioButton_密码登录.Name = "radioButton_密码登录";
+            this.radioButton_密码登录.Size = new System.Drawing.Size(71, 16);
+            this.radioButton_密码登录.TabIndex = 32;
+            this.radioButton_密码登录.TabStop = true;
+            this.radioButton_密码登录.Text = "密码登录";
+            this.radioButton_密码登录.UseVisualStyleBackColor = true;
+            this.radioButton_密码登录.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // radioButton2
+            // radioButton_短信登录
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(151, 372);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(107, 16);
-            this.radioButton2.TabIndex = 33;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "短信验证码登录";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.radioButton_短信登录.AutoSize = true;
+            this.radioButton_短信登录.Location = new System.Drawing.Point(151, 372);
+            this.radioButton_短信登录.Name = "radioButton_短信登录";
+            this.radioButton_短信登录.Size = new System.Drawing.Size(107, 16);
+            this.radioButton_短信登录.TabIndex = 33;
+            this.radioButton_短信登录.TabStop = true;
+            this.radioButton_短信登录.Text = "短信验证码登录";
+            this.radioButton_短信登录.UseVisualStyleBackColor = true;
+            this.radioButton_短信登录.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // linkLabel1
+            // linkLabel_联系方式
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.linkLabel1.Location = new System.Drawing.Point(729, 524);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(117, 22);
-            this.linkLabel1.TabIndex = 34;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = " 联系作者(QQ)";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabel_联系方式.AutoSize = true;
+            this.linkLabel_联系方式.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.linkLabel_联系方式.Location = new System.Drawing.Point(729, 524);
+            this.linkLabel_联系方式.Name = "linkLabel_联系方式";
+            this.linkLabel_联系方式.Size = new System.Drawing.Size(117, 22);
+            this.linkLabel_联系方式.TabIndex = 34;
+            this.linkLabel_联系方式.TabStop = true;
+            this.linkLabel_联系方式.Text = " 联系作者(QQ)";
+            this.linkLabel_联系方式.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // button13
+            // button_获取短信验证码
             // 
-            this.button13.Location = new System.Drawing.Point(173, 394);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(85, 40);
-            this.button13.TabIndex = 35;
-            this.button13.Text = "获取短信验证码";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Visible = false;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.button_获取短信验证码.Location = new System.Drawing.Point(173, 394);
+            this.button_获取短信验证码.Name = "button_获取短信验证码";
+            this.button_获取短信验证码.Size = new System.Drawing.Size(85, 40);
+            this.button_获取短信验证码.TabIndex = 35;
+            this.button_获取短信验证码.Text = "获取短信验证码";
+            this.button_获取短信验证码.UseVisualStyleBackColor = true;
+            this.button_获取短信验证码.Visible = false;
+            this.button_获取短信验证码.Click += new System.EventHandler(this.button_获取短信验证码_Click);
             // 
             // richTextBox3
             // 
@@ -452,44 +454,64 @@
             this.richTextBox3.Text = "";
             this.richTextBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.richTextBox3_MouseDown);
             // 
-            // label11
+            // label_验证短信
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(264, 466);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(0, 12);
-            this.label11.TabIndex = 37;
-            this.label11.Visible = false;
+            this.label_验证短信.AutoSize = true;
+            this.label_验证短信.Location = new System.Drawing.Point(264, 466);
+            this.label_验证短信.Name = "label_验证短信";
+            this.label_验证短信.Size = new System.Drawing.Size(0, 12);
+            this.label_验证短信.TabIndex = 37;
+            this.label_验证短信.Visible = false;
             // 
-            // button14
+            // button_查询学校
             // 
-            this.button14.Location = new System.Drawing.Point(12, 394);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(85, 40);
-            this.button14.TabIndex = 38;
-            this.button14.Text = "查询用户所在学校";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.button_查询学校.Location = new System.Drawing.Point(12, 394);
+            this.button_查询学校.Name = "button_查询学校";
+            this.button_查询学校.Size = new System.Drawing.Size(85, 40);
+            this.button_查询学校.TabIndex = 38;
+            this.button_查询学校.Text = "查询用户所在学校";
+            this.button_查询学校.UseVisualStyleBackColor = true;
+            this.button_查询学校.Click += new System.EventHandler(this.button_查询学校_Click);
             // 
-            // button15
+            // button_rich3清空
             // 
-            this.button15.Location = new System.Drawing.Point(769, 449);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(76, 29);
-            this.button15.TabIndex = 39;
-            this.button15.Text = "清空";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.button_rich3清空.Location = new System.Drawing.Point(769, 449);
+            this.button_rich3清空.Name = "button_rich3清空";
+            this.button_rich3清空.Size = new System.Drawing.Size(76, 29);
+            this.button_rich3清空.TabIndex = 39;
+            this.button_rich3清空.Text = "清空";
+            this.button_rich3清空.UseVisualStyleBackColor = true;
+            this.button_rich3清空.Click += new System.EventHandler(this.button_清空rich3_Click);
             // 
-            // button16
+            // button_查询在线状态
             // 
-            this.button16.Location = new System.Drawing.Point(577, 487);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(98, 23);
-            this.button16.TabIndex = 40;
-            this.button16.Text = " 查询是否在线";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
+            this.button_查询在线状态.Location = new System.Drawing.Point(577, 487);
+            this.button_查询在线状态.Name = "button_查询在线状态";
+            this.button_查询在线状态.Size = new System.Drawing.Size(98, 23);
+            this.button_查询在线状态.TabIndex = 40;
+            this.button_查询在线状态.Text = " 查询是否在线";
+            this.button_查询在线状态.UseVisualStyleBackColor = true;
+            this.button_查询在线状态.Click += new System.EventHandler(this.button_查询在线_Click);
+            // 
+            // button_清空缓存
+            // 
+            this.button_清空缓存.Location = new System.Drawing.Point(668, 12);
+            this.button_清空缓存.Name = "button_清空缓存";
+            this.button_清空缓存.Size = new System.Drawing.Size(97, 23);
+            this.button_清空缓存.TabIndex = 41;
+            this.button_清空缓存.Text = "初始化软件";
+            this.button_清空缓存.UseVisualStyleBackColor = true;
+            this.button_清空缓存.Click += new System.EventHandler(this.button_清空缓存_Click);
+            // 
+            // checkBox_保存密码
+            // 
+            this.checkBox_保存密码.AutoSize = true;
+            this.checkBox_保存密码.Location = new System.Drawing.Point(186, 350);
+            this.checkBox_保存密码.Name = "checkBox_保存密码";
+            this.checkBox_保存密码.Size = new System.Drawing.Size(72, 16);
+            this.checkBox_保存密码.TabIndex = 42;
+            this.checkBox_保存密码.Text = "保存密码";
+            this.checkBox_保存密码.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -497,43 +519,45 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(853, 552);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.checkBox_保存密码);
+            this.Controls.Add(this.button_清空缓存);
+            this.Controls.Add(this.button_查询在线状态);
+            this.Controls.Add(this.button_rich3清空);
+            this.Controls.Add(this.button_查询学校);
+            this.Controls.Add(this.label_验证短信);
             this.Controls.Add(this.richTextBox3);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button_获取短信验证码);
+            this.Controls.Add(this.linkLabel_联系方式);
+            this.Controls.Add(this.radioButton_短信登录);
+            this.Controls.Add(this.radioButton_密码登录);
+            this.Controls.Add(this.button_加载上次成功id);
+            this.Controls.Add(this.checkBox_保存账号);
+            this.Controls.Add(this.button_rich1清空);
+            this.Controls.Add(this.label_成功IP);
+            this.Controls.Add(this.label_last_ip);
+            this.Controls.Add(this.button_rich2清空);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label_session_id_success);
+            this.Controls.Add(this.label_last_session_id);
+            this.Controls.Add(this.button_下线该ID);
+            this.Controls.Add(this.label_session_id);
+            this.Controls.Add(this.textBox_session_id);
+            this.Controls.Add(this.button_发送自定义消息);
+            this.Controls.Add(this.button_使用说明);
+            this.Controls.Add(this.label_提示);
+            this.Controls.Add(this.button_初始化模板);
+            this.Controls.Add(this.button_获取IP地址);
+            this.Controls.Add(this.label_状态);
+            this.Controls.Add(this.button_发送认证信息);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox_密码);
+            this.Controls.Add(this.textBox_账号);
+            this.Controls.Add(this.textBox_ip);
+            this.Controls.Add(this.label_密码);
+            this.Controls.Add(this.label_账号);
+            this.Controls.Add(this.label_目标IP);
+            this.Controls.Add(this.button_退出);
+            this.Controls.Add(this.button_登录);
             this.Controls.Add(this.richTextBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -553,49 +577,51 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button_退出;
+        private System.Windows.Forms.Label label_目标IP;
+        private System.Windows.Forms.Label label_账号;
+        private System.Windows.Forms.Label label_密码;
+        private System.Windows.Forms.TextBox textBox_ip;
+        private System.Windows.Forms.TextBox textBox_账号;
+        private System.Windows.Forms.TextBox textBox_密码;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button_发送认证信息;
+        private System.Windows.Forms.Label label_状态;
         private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button6;
-        public System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button_获取IP地址;
+        private System.Windows.Forms.Button button_初始化模板;
+        private System.Windows.Forms.Label label_提示;
+        private System.Windows.Forms.Button button_使用说明;
+        public System.Windows.Forms.Button button_登录;
+        private System.Windows.Forms.Button button_发送自定义消息;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 显示窗口ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 隐藏窗口ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox_session_id;
+        private System.Windows.Forms.Label label_session_id;
+        private System.Windows.Forms.Button button_下线该ID;
+        private System.Windows.Forms.Label label_last_session_id;
+        private System.Windows.Forms.Label label_session_id_success;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button_rich2清空;
+        private System.Windows.Forms.Label label_last_ip;
+        private System.Windows.Forms.Label label_成功IP;
+        private System.Windows.Forms.Button button_rich1清空;
+        private System.Windows.Forms.CheckBox checkBox_保存账号;
+        private System.Windows.Forms.Button button_加载上次成功id;
+        private System.Windows.Forms.RadioButton radioButton_密码登录;
+        private System.Windows.Forms.RadioButton radioButton_短信登录;
+        private System.Windows.Forms.LinkLabel linkLabel_联系方式;
+        private System.Windows.Forms.Button button_获取短信验证码;
         private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Label label_验证短信;
+        private System.Windows.Forms.Button button_查询学校;
+        private System.Windows.Forms.Button button_rich3清空;
+        private System.Windows.Forms.Button button_查询在线状态;
+        private System.Windows.Forms.Button button_清空缓存;
+        private System.Windows.Forms.CheckBox checkBox_保存密码;
 
         public System.EventHandler Form1_Load { get; set; }
     }

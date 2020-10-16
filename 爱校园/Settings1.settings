@@ -8,7 +8,7 @@
     <Setting Name="password" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="bcmm" Type="System.Boolean" Scope="User">
+    <Setting Name="bczh" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="last_success_ip" Type="System.String" Scope="User">
@@ -24,6 +24,9 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="login_type_PWD" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="bcmm" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>

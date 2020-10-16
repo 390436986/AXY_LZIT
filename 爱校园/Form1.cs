@@ -36,19 +36,21 @@ namespace 爱校园
 
         private void start_load(object sender, EventArgs e)
         {
-            label11.Text = "";
-            radioButton1.Checked = Settings1.Default.login_type_PWD;
-            radioButton2.Checked = Settings1.Default.login_type_SMS;
-            checkBox1.Checked = Settings1.Default.bcmm;
-            textBox2.Text = Settings1.Default.user_name;   
+            label_验证短信.Text = "";
+            radioButton_密码登录.Checked = Settings1.Default.login_type_PWD;
+            radioButton_短信登录.Checked = Settings1.Default.login_type_SMS;
+            checkBox_保存账号.Checked = Settings1.Default.bczh;
+            textBox_账号.Text = Settings1.Default.user_name;
+            checkBox_保存密码.Checked = Settings1.Default.bcmm;
+            textBox_密码.Text = Settings1.Default.password;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button_退出_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button_登录_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process cmd = new System.Diagnostics.Process();
             cmd.StartInfo.FileName = "cmd.exe";
@@ -59,11 +61,11 @@ namespace 爱校园
             cmd.StartInfo.CreateNoWindow = true;//是否隐藏程序窗口
             cmd.Start();//启动程序
 
-            string ip = textBox1.Text;//目标IP地址
-            string user = textBox2.Text;//账号
-            string password = textBox3.Text;//密码
-            string sms_code = textBox3.Text;//短信验证码
-            string token_id = label11.Text;//token_id
+            string ip = textBox_ip.Text;//目标IP地址
+            string user = textBox_账号.Text;//账号
+            string password = textBox_密码.Text;//密码
+            string sms_code = textBox_密码.Text;//短信验证码
+            string token_id = label_验证短信.Text;//token_id
             string code_curl = "curl -d \"req=";//命令字符串
             string code_user_name = "%7B%22user_name%22%3A%22";//用户名前字符
             string code_username_sms = "%22%2C%22user_name%22%3A%22";//短信登录用户名
@@ -83,7 +85,7 @@ namespace 爱校园
             string server_ip = " " + "http://61.178.5.73/rasPortal/userAuth.do";//认证服务器地址
 
 
-            if (textBox3.Text == "")//未输入密码时自动使用默认密码
+            if (textBox_密码.Text == "")//未输入密码时自动使用默认密码
             {
                 password = "lz123456";
             }
@@ -130,9 +132,9 @@ namespace 爱校园
 
 
 
-            if (radioButton1.Checked == true)//使用密码登录
+            if (radioButton_密码登录.Checked == true)//使用密码登录
             {
-                if (textBox1.Text == "" || textBox2.Text == "")
+                if (textBox_ip.Text == "" || textBox_账号.Text == "")
                 {
                     MessageBox.Show("请输入正确信息");
                     
@@ -151,8 +153,8 @@ namespace 爱校园
                 if (xx[11] == "成功�?}")
                 {
 
-                    label8.Text = xx[3];
-                    label10.Text = ip;
+                    label_session_id_success.Text = xx[3];
+                    label_成功IP.Text = ip;
                     Settings1.Default.last_success_ip = ip;
                     Settings1.Default.last_success_session_id = xx[3];
                     Settings1.Default.Save();
@@ -163,9 +165,9 @@ namespace 爱校园
 
                 richTextBox1.Text = "";
             }
-            if(radioButton2.Checked == true)//短信验证码登录
+            if(radioButton_短信登录.Checked == true)//短信验证码登录
               {
-                  if (textBox3.Text == "")
+                  if (textBox_密码.Text == "")
                   {
                       MessageBox.Show("请输入短信验证码！", "警告",
                         System.Windows.Forms.MessageBoxButtons.OK,
@@ -173,7 +175,7 @@ namespace 爱校园
                   }
                   else
                   {
-                      if (label11.Text == "")
+                      if (label_验证短信.Text == "")
                       {
                           MessageBox.Show("请先确认已经成功获取了验证码!");
                       }
@@ -192,8 +194,8 @@ namespace 爱校园
                       if (xx[11] == "成功�?}")
                       {
 
-                          label8.Text = xx[3];
-                          label10.Text = ip;
+                          label_session_id_success.Text = xx[3];
+                          label_成功IP.Text = ip;
                           Settings1.Default.last_success_ip = ip;
                           Settings1.Default.last_success_session_id = xx[3];
                           Settings1.Default.Save();
@@ -210,7 +212,7 @@ namespace 爱校园
               }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button_获取IP地址_Click(object sender, EventArgs e)
         {
             //获取IP地址
             string result = ("route");
@@ -227,20 +229,20 @@ namespace 爱校园
                     c.Connect("www.baidu.com", 80);
                     string ip = ((System.Net.IPEndPoint)c.Client.LocalEndPoint).Address.ToString();
                     c.Close();
-                    textBox1.Text = ip;
+                    textBox_ip.Text = ip;
                 }
                 catch (Exception)
                 {
-                    textBox1.Text = "请检查网络连接";
+                    textBox_ip.Text = "请检查网络连接";
                 }
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button_初始化认证模板_Click(object sender, EventArgs e)
         {
-            string ip = textBox1.Text;//目标IP地址
-            string user = textBox2.Text;//账号
-            string password = textBox3.Text;//密码
+            string ip = textBox_ip.Text;//目标IP地址
+            string user = textBox_账号.Text;//账号
+            string password = textBox_密码.Text;//密码
             string code_user_ip = "%7B%22user_name%22%3A%22";//用户名前字符
             string code_session_ip = "%22%2C%22password%22%3A%22";//密码前字符
             string code_quit_type = "%22%2C%22token_id%22%3A%22";//tokenid,可不填
@@ -270,7 +272,7 @@ namespace 爱校园
             richTextBox1.Text = System.Web.HttpUtility.UrlDecode(mb.ToString());
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button_发送认证消息_Click(object sender, EventArgs e)
         {
             //确认是否发送自定义认证信息
                     MessageBox.Show("确定发送自定义认证信息？（如果信息填写有误，程序将会一段时间无法响应）", "提示",
@@ -307,12 +309,12 @@ namespace 爱校园
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button_使用说明_Click(object sender, EventArgs e)
         {
             new Form2().ShowDialog();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void button_发送自定义消息_Click(object sender, EventArgs e)
         {
                 MessageBox.Show("确定发送自定义CMD命令？（如果输入的是持续性命令，程序需要命令完成后才能显示结果，推荐使用系统自带的cmd）", "提示",
                 System.Windows.Forms.MessageBoxButtons.OK,
@@ -366,32 +368,44 @@ namespace 爱校园
                        System.Windows.Forms.MessageBoxIcon.Warning);
             if (result == DialogResult.OK)
             {
-                if (checkBox1.Checked == true)
+                if (checkBox_保存账号.Checked == true)
                 {
-                    Settings1.Default.user_name = textBox2.Text;
-                    Settings1.Default.bcmm = checkBox1.Checked;
+                    Settings1.Default.user_name = textBox_账号.Text;
+                    Settings1.Default.bczh = checkBox_保存账号.Checked;
                     Settings1.Default.Save();
                 }
-                if (checkBox1.Checked == false)
+                if (checkBox_保存账号.Checked == false)
                 {
                     Settings1.Default.user_name = "";
+                    Settings1.Default.bczh = false;
+                    Settings1.Default.Save();
+                }
+                if (checkBox_保存密码.Checked == true)
+                {
+                    Settings1.Default.password = textBox_密码.Text;
+                    Settings1.Default.bcmm = checkBox_保存密码.Checked;
+                    Settings1.Default.Save();
+                }
+                if (checkBox_保存密码.Checked == false)
+                {
+                    Settings1.Default.password = "";
                     Settings1.Default.bcmm = false;
                     Settings1.Default.Save();
-                    this.Dispose();                //释放资源
-                    Application.Exit();            //关闭应用程序窗体
                 }
-                if (radioButton1.Checked == true)
+                if (radioButton_密码登录.Checked == true)
                 {
                     Settings1.Default.login_type_PWD = true;
                     Settings1.Default.login_type_SMS = false;
                     Settings1.Default.Save();
                 }
-                if (radioButton2.Checked == true)
+                if (radioButton_短信登录.Checked == true)
                 {
                     Settings1.Default.login_type_SMS = true;
                     Settings1.Default.login_type_PWD = false;
                     Settings1.Default.Save();
                 }
+                this.Dispose();                //释放资源
+                Application.Exit();            //关闭应用程序窗体
             }
             else
                 if (result == DialogResult.Cancel)
@@ -425,7 +439,7 @@ namespace 爱校园
             }
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void button_下线该ID_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process cmd = new System.Diagnostics.Process();
             cmd.StartInfo.FileName = "cmd.exe";
@@ -435,15 +449,15 @@ namespace 爱校园
             cmd.StartInfo.RedirectStandardError = true;//重定向标准错误输出
             cmd.StartInfo.CreateNoWindow = true;//是否隐藏程序窗口
             cmd.Start();//启动程序
-            if (textBox4.Text == "")
+            if (textBox_session_id.Text == "")
             {
                 MessageBox.Show("请输入session_id!");
                 cmd.Close();
             }
             else
             {
-                string session_id = textBox4.Text;
-                string user_ip = textBox1.Text;
+                string session_id = textBox_session_id.Text;
+                string user_ip = textBox_ip.Text;
                 string code_curl = "curl -d \"req=";//命令字符串
                 string code_user_ip = "%7B%22user_ip%22%3A%22";//user_ip前缀
                 string code_session_ip = "%22%2C%22session_id%22%3A%22";//session_id前缀
@@ -459,7 +473,7 @@ namespace 爱校园
                 pj.Append(code_quit_type);
                 pj.Append(server_ip);
 
-                richTextBox1.Text = textBox4.Text;
+                richTextBox1.Text = textBox_session_id.Text;
 
                 cmd.StandardInput.WriteLine(pj.ToString() + "&exit");//向CMD发送指令
                 cmd.StandardInput.AutoFlush = true;//提交
@@ -468,14 +482,14 @@ namespace 爱校园
                 Regex rex = new Regex(@"\{(.*)\}");//正则取返回值
                 Match result = rex.Match(utf_output);//赋值
                 richTextBox2.Text = result.ToString();
-                richTextBox1.Text= "已向服务器发送下线session_id为"+textBox4.Text+"，"+"IP地址为"+user_ip+"的设备的命令，请查看状态栏信息";
+                richTextBox1.Text= "已向服务器发送下线session_id为"+textBox_session_id.Text+"，"+"IP地址为"+user_ip+"的设备的命令，请查看状态栏信息";
 
                 cmd.WaitForExit();//等待程序退出
                 cmd.Close();//程序结束后退出
             }
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void button_下线_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process cmd = new System.Diagnostics.Process();
             cmd.StartInfo.FileName = "cmd.exe";
@@ -485,15 +499,15 @@ namespace 爱校园
             cmd.StartInfo.RedirectStandardError = true;//重定向标准错误输出
             cmd.StartInfo.CreateNoWindow = true;//是否隐藏程序窗口
             cmd.Start();//启动程序
-            if (label8.Text == "")
+            if (label_session_id_success.Text == "")
             {
                 MessageBox.Show("请先使用本程成功登录获取ID！","警告");
                 cmd.Close();
             }
             else
             {
-                string session_id = label8.Text;
-                string user_ip = textBox1.Text;
+                string session_id = label_session_id_success.Text;
+                string user_ip = textBox_ip.Text;
                 string code_curl = "curl -d \"req=";//命令字符串
                 string code_user_ip = "%7B%22user_ip%22%3A%22";//user_ip前缀
                 string code_session_ip = "%22%2C%22session_id%22%3A%22";//session_id前缀
@@ -517,19 +531,19 @@ namespace 爱校园
                 Regex rex = new Regex(@"\{(.*)\}");//正则取返回值
                 Match result = rex.Match(utf_output);//赋值
                 richTextBox2.Text = result.ToString();
-                richTextBox1.Text = "已向服务器发送下线session_id为" + label8.Text + "，" + "IP地址为" + label10.Text + "的设备的命令，请查看状态栏信息";
+                richTextBox1.Text = "已向服务器发送下线session_id为" + label_session_id_success.Text + "，" + "IP地址为" + label_成功IP.Text + "的设备的命令，请查看状态栏信息";
 
                 cmd.WaitForExit();//等待程序退出
                 cmd.Close();//程序结束后退出
             }
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void button_清空rich2_Click(object sender, EventArgs e)
         {
             richTextBox2.Text = "";
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void button_清空rich1_Click(object sender, EventArgs e)
         {
             richTextBox1.Text = "";
         }
@@ -539,10 +553,10 @@ namespace 爱校园
             HideCaret(richTextBox2.Handle);
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void button_加载上次成功ID_Click(object sender, EventArgs e)
         {
-            label8.Text = Settings1.Default.last_success_session_id;
-            label10.Text = Settings1.Default.last_success_ip;
+            label_session_id_success.Text = Settings1.Default.last_success_session_id;
+            label_成功IP.Text = Settings1.Default.last_success_ip;
         }
 
 
@@ -552,14 +566,14 @@ namespace 爱校园
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            label3.Text = "密码:";
-            button13.Visible = false;
+            label_密码.Text = "密码:";
+            button_获取短信验证码.Visible = false;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            button13.Visible = true;
-            label3.Text = "短信验证码：";
+            button_获取短信验证码.Visible = true;
+            label_密码.Text = "短信验证码：";
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -567,9 +581,9 @@ namespace 爱校园
             System.Diagnostics.Process.Start("http://wpa.qq.com/msgrd?v=3&uin=3276735002&site=qq&menu=yes");
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private void button_获取短信验证码_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text == "")
+            if (textBox_账号.Text == "")
             {
                 MessageBox.Show("请输入正确的手机号！");
             }
@@ -588,7 +602,7 @@ namespace 爱校园
                     cmd.StartInfo.CreateNoWindow = true;//是否隐藏程序窗口
                     cmd.Start();//启动程序
 
-                    string user = textBox2.Text;
+                    string user = textBox_账号.Text;
                     string code_req = "curl -d \"req=";//命令字符串
                     string code_mobile = "%7B%22mobile%22%3A%22";//手机号前缀
                     string code_mobile_end = "%22%7D\"";
@@ -615,7 +629,7 @@ namespace 爱校园
                     {
                         string token_id = xx[11];
                         string token_id_result = token_id.Substring(0, token_id.Length - 2);
-                        label11.Text = System.Web.HttpUtility.UrlEncode(token_id_result, System.Text.Encoding.GetEncoding("utf-8"));//token_idURL转码
+                        label_验证短信.Text = System.Web.HttpUtility.UrlEncode(token_id_result, System.Text.Encoding.GetEncoding("utf-8"));//token_idURL转码
                     }
 
                     cmd.WaitForExit();//等待程序退出
@@ -631,9 +645,9 @@ namespace 爱校园
             HideCaret(richTextBox3.Handle);
         }
 
-        private void button14_Click(object sender, EventArgs e)
+        private void button_查询学校_Click(object sender, EventArgs e)
         {
-            if(textBox2.Text==""||textBox2.Text.Length < 11)
+            if(textBox_账号.Text==""||textBox_账号.Text.Length < 11)
             {
                 MessageBox.Show("请输入正确的手机号！");
             }
@@ -646,7 +660,7 @@ namespace 爱校园
             cmd.StartInfo.CreateNoWindow = true;//是否隐藏程序窗口
             cmd.Start();//启动程序
 
-            string user = textBox2.Text;
+            string user = textBox_账号.Text;
             string code_start = "curl -d \"req=";//命令字符串
             string code_mobile = "%7B%22user_name%22%3A%22";//手机号前缀
             string code_mobile_end = "%22%7D\"";
@@ -672,12 +686,12 @@ namespace 爱校园
 
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void button_清空rich3_Click(object sender, EventArgs e)
         {
             richTextBox3.Text = "";
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void button_查询在线_Click(object sender, EventArgs e)
         {
                 System.Diagnostics.Process cmd = new System.Diagnostics.Process();
                 cmd.StartInfo.FileName = "cmd.exe";
@@ -690,7 +704,7 @@ namespace 爱校园
 
                 string code_start = "curl -d \"req=";//命令字符串
                 string code_session_id_start = "%7B%22session_id%22%3A%22";
-                string session_id = label8.Text;//session_id
+                string session_id = label_session_id_success.Text;//session_id
                 string session_id_end = "%22%7D\"";
                 string server_ip = " " + "http://61.178.5.73/rasPortal/check.do";//查询服务器地址
 
@@ -701,7 +715,7 @@ namespace 爱校园
                 id.Append(session_id_end);
                 id.Append(server_ip);
 
-                richTextBox2.Text = "已向服务器查询session_id为" + label8.Text + "的设备是否下线，具体请看下方返回信息";
+                richTextBox2.Text = "已向服务器查询session_id为" + label_session_id_success.Text + "的设备是否下线，具体请看下方返回信息";
                 cmd.StandardInput.WriteLine(id.ToString() + "&exit");//像CMD发送命令
                 cmd.StandardInput.AutoFlush = true;//提交
                 string output = cmd.StandardOutput.ReadToEnd();//获取CMD窗口输出信息
@@ -717,6 +731,20 @@ namespace 爱校园
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
-        }   
+        }
+
+        private void button_清空缓存_Click(object sender, EventArgs e)
+        {
+            textBox_ip.Text = "";
+            textBox_账号.Text = "";
+            textBox_密码.Text = "";
+            Settings1.Default.last_success_ip = "";
+            Settings1.Default.last_success_session_id = "";
+            Settings1.Default.user_name = "";
+            Settings1.Default.password = "";
+            richTextBox1.Text = "";
+            richTextBox2.Text = "";
+            richTextBox3.Text = "";
+        }
     }
 }

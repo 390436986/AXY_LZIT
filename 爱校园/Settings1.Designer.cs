@@ -50,12 +50,12 @@ namespace 爱校园 {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool bcmm {
+        public bool bczh {
             get {
-                return ((bool)(this["bcmm"]));
+                return ((bool)(this["bczh"]));
             }
             set {
-                this["bcmm"] = value;
+                this["bczh"] = value;
             }
         }
         
@@ -116,6 +116,18 @@ namespace 爱校园 {
             }
             set {
                 this["login_type_PWD"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool bcmm {
+            get {
+                return ((bool)(this["bcmm"]));
+            }
+            set {
+                this["bcmm"] = value;
             }
         }
     }
