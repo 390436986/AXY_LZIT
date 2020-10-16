@@ -247,7 +247,7 @@ namespace 爱校园
             string code_session_ip = "%22%2C%22password%22%3A%22";//密码前字符
             string code_quit_type = "%22%2C%22token_id%22%3A%22";//tokenid,可不填
             string fifth = "%22%2C%22user_ip%22%3A%22";//user_ip前缀
-            string sixth = "%22%2C%22bas_name%22%3A%22GS-LZ-XXH-MSE-1.MAN.NE40E";//运营商信息，可不填
+            string sixth = "%22%2C%22bas_name%22%3A%22LZ-QLH-YJQ-BAS-1.MAN.ME60-X16";//运营商信息，可不填
             //string seventh = "%22%2C%22school_name%22%3A%22";//学校名称,可不填
             string eighth = "%22%2C%22client_type%22%3A%22" + "PC";//设备类型
             string ninth = "%22%2C%22device_name%22%3A%22" + "SBischool";//设备名
@@ -501,7 +501,7 @@ namespace 爱校园
             cmd.Start();//启动程序
             if (label_session_id_success.Text == "")
             {
-                MessageBox.Show("请先使用本程成功登录获取ID！","警告");
+                MessageBox.Show("请先使用本程序成功登录获取ID！","警告");
                 cmd.Close();
             }
             else
