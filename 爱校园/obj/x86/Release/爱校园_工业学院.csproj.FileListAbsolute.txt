@@ -1,0 +1,15 @@
+C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\bin\Release\爱校园_工业学院.exe.config
+C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\bin\Release\爱校园_工业学院.exe.manifest
+C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\bin\Release\爱校园_工业学院.application
+C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\bin\Release\爱校园_工业学院.exe
+C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\bin\Release\爱校园_工业学院.pdb
+C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Release\爱校园_工业学院.csprojAssemblyReference.cache
+C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Release\爱校园.Form1.resources
+C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Release\爱校园.Form2.resources
+C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Release\爱校园.Properties.Resources.resources
+C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Release\爱校园_工业学院.csproj.GenerateResource.cache
+C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Release\爱校园_工业学院.csproj.CoreCompileInputs.cache
+C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Release\爱校园_工业学院.exe.manifest
+C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Release\爱校园_工业学院.application
+C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Release\爱校园_工业学院.exe
+C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Release\爱校园_工业学院.pdb

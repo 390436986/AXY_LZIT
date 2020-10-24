@@ -559,7 +559,7 @@
             this.Controls.Add(this.button_退出);
             this.Controls.Add(this.button_登录);
             this.Controls.Add(this.richTextBox2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;

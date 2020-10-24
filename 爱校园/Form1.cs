@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.Threading.Tasks;
-using System.Diagnostics;
-using System.Text.RegularExpressions;
-using System.Runtime.InteropServices;
 using System.IO;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
+using System.Windows.Forms;
 namespace 爱校园
 {
     public partial class Form1 : Form
@@ -80,7 +73,7 @@ namespace 爱校园
             string code_client_type = "%22%2C%22client_type%22%3A%22" + "PC";//设备类型
             string code_device_name = "%22%2C%22device_name%22%3A%22" + "SBischool";//设备名
             string code_client_version = "%22%2C%22client_version%22%3A%22";//客户端版本
-            string client_version= "9.9.9%22%7D\" ";//客户端版本
+            string client_version = "9.9.9%22%7D\" ";//客户端版本
             string client_version_sms = "9.9.9";
             string server_ip = " " + "http://61.178.5.73/rasPortal/userAuth.do";//认证服务器地址
 
@@ -137,7 +130,7 @@ namespace 爱校园
                 if (textBox_ip.Text == "" || textBox_账号.Text == "")
                 {
                     MessageBox.Show("请输入正确信息");
-                    
+
                 }
                 cmd.StandardInput.WriteLine(mm_result + "&exit");//向CMD发送指令
                 cmd.StandardInput.AutoFlush = true;//提交
@@ -165,51 +158,51 @@ namespace 爱校园
 
                 richTextBox1.Text = "";
             }
-            if(radioButton_短信登录.Checked == true)//短信验证码登录
-              {
-                  if (textBox_密码.Text == "")
-                  {
-                      MessageBox.Show("请输入短信验证码！", "警告",
-                        System.Windows.Forms.MessageBoxButtons.OK,
-                       System.Windows.Forms.MessageBoxIcon.Warning);
-                  }
-                  else
-                  {
-                      if (label_验证短信.Text == "")
-                      {
-                          MessageBox.Show("请先确认已经成功获取了验证码!");
-                      }
-                      cmd.StandardInput.WriteLine(sms.ToString() + "&exit");//向CMD发送指令
-                      cmd.StandardInput.AutoFlush = true;//提交
-                      string output = cmd.StandardOutput.ReadToEnd();//获取CMD窗口输出信息
-                      StreamReader output_stream = cmd.StandardOutput;
-                      string utf_output = Encoding.UTF8.GetString(Encoding.Default.GetBytes(output));//将获取到的字符转码
-                      Regex rex = new Regex(@"\{(.*)\}");//正则取返回结果
-                      Match result = rex.Match(utf_output);//取值后赋值
-                      richTextBox2.Text = result.ToString();
-                      
-
-                      string session_id = result.ToString();
-                      string[] xx = session_id.Split('\"');
-                      if (xx[11] == "成功�?}")
-                      {
-
-                          label_session_id_success.Text = xx[3];
-                          label_成功IP.Text = ip;
-                          Settings1.Default.last_success_ip = ip;
-                          Settings1.Default.last_success_session_id = xx[3];
-                          Settings1.Default.Save();
-                      }
-                      //string session_result = xx[3];
-                      //textBox4.Text = session_result;
+            if (radioButton_短信登录.Checked == true)//短信验证码登录
+            {
+                if (textBox_密码.Text == "")
+                {
+                    MessageBox.Show("请输入短信验证码！", "警告",
+                      System.Windows.Forms.MessageBoxButtons.OK,
+                     System.Windows.Forms.MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    if (label_验证短信.Text == "")
+                    {
+                        MessageBox.Show("请先确认已经成功获取了验证码!");
+                    }
+                    cmd.StandardInput.WriteLine(sms.ToString() + "&exit");//向CMD发送指令
+                    cmd.StandardInput.AutoFlush = true;//提交
+                    string output = cmd.StandardOutput.ReadToEnd();//获取CMD窗口输出信息
+                    StreamReader output_stream = cmd.StandardOutput;
+                    string utf_output = Encoding.UTF8.GetString(Encoding.Default.GetBytes(output));//将获取到的字符转码
+                    Regex rex = new Regex(@"\{(.*)\}");//正则取返回结果
+                    Match result = rex.Match(utf_output);//取值后赋值
+                    richTextBox2.Text = result.ToString();
 
 
-                      cmd.WaitForExit();//等待程序退出
-                      cmd.Close();//程序结束后退出
+                    string session_id = result.ToString();
+                    string[] xx = session_id.Split('\"');
+                    if (xx[11] == "成功�?}")
+                    {
 
-                      //richTextBox1.Text = sms_result;
-                  }
-              }
+                        label_session_id_success.Text = xx[3];
+                        label_成功IP.Text = ip;
+                        Settings1.Default.last_success_ip = ip;
+                        Settings1.Default.last_success_session_id = xx[3];
+                        Settings1.Default.Save();
+                    }
+                    //string session_result = xx[3];
+                    //textBox4.Text = session_result;
+
+
+                    cmd.WaitForExit();//等待程序退出
+                    cmd.Close();//程序结束后退出
+
+                    //richTextBox1.Text = sms_result;
+                }
+            }
         }
 
         private void button_获取IP地址_Click(object sender, EventArgs e)
@@ -275,37 +268,33 @@ namespace 爱校园
         private void button_发送认证消息_Click(object sender, EventArgs e)
         {
             //确认是否发送自定义认证信息
-                    MessageBox.Show("确定发送自定义认证信息？（如果信息填写有误，程序将会一段时间无法响应）", "提示",
-                    System.Windows.Forms.MessageBoxButtons.OK,
-                    System.Windows.Forms.MessageBoxIcon.Warning);
-                    System.Diagnostics.Process cmd = new System.Diagnostics.Process();
-                    cmd.StartInfo.FileName = "cmd.exe";
-                    cmd.StartInfo.UseShellExecute = false;//是否使用系统shell启动
-                    cmd.StartInfo.RedirectStandardInput = true;//接受来自调用程序的输入信息
-                    cmd.StartInfo.RedirectStandardOutput = true;//允许调用程序获取输出信息
-                    cmd.StartInfo.RedirectStandardError = true;//重定向标准错误输出
-                    cmd.StartInfo.CreateNoWindow = true;//是否隐藏程序窗口
-                    cmd.Start();//启动程序
-                    if (richTextBox1.Text == "")
-                       {
-                         MessageBox.Show("请不要提交空信息！");
-                         cmd.Close();
-                        }
-                    else
-                        {
-                         string code_result = System.Web.HttpUtility.UrlEncode(richTextBox1.Text);
-                         cmd.StandardInput.WriteLine("curl -d \"req=" + code_result + "\"+" + " " + "http://61.178.5.73/rasPortal/userAuth.do" + "&exit");//向CMD发送指令
-                         cmd.StandardInput.AutoFlush = true;//提交
+            MessageBox.Show("确定发送自定义认证信息？（如果信息填写有误，程序将会一段时间无法响应）", "提示",
+            System.Windows.Forms.MessageBoxButtons.OK,
+            System.Windows.Forms.MessageBoxIcon.Warning);
+            System.Diagnostics.Process cmd = new System.Diagnostics.Process();
+            cmd.StartInfo.FileName = "cmd.exe";
+            cmd.StartInfo.UseShellExecute = false;//是否使用系统shell启动
+            cmd.StartInfo.RedirectStandardInput = true;//接受来自调用程序的输入信息
+            cmd.StartInfo.RedirectStandardOutput = true;//允许调用程序获取输出信息
+            cmd.StartInfo.RedirectStandardError = true;//重定向标准错误输出
+            cmd.StartInfo.CreateNoWindow = true;//是否隐藏程序窗口
+            cmd.Start();//启动程序
+            if (richTextBox1.Text == "")
+            {
+                MessageBox.Show("请不要提交空信息！");
+                cmd.Close();
+            }
+            else
+            {
+                string code_result = System.Web.HttpUtility.UrlEncode(richTextBox1.Text);
+                cmd.StandardInput.WriteLine("curl -d \"req=" + code_result + "\"+" + " " + "http://61.178.5.73/rasPortal/userAuth.do" + "&exit");//向CMD发送指令
+                cmd.StandardInput.AutoFlush = true;//提交
 
-                         string output = cmd.StandardOutput.ReadToEnd();//获取CMD窗口输出信息
-                         string utf_output = Encoding.UTF8.GetString(Encoding.Default.GetBytes(output));//转码输出信息
-                         Regex rex = new Regex(@"\{(.*)\}");
-                         Match result = rex.Match(utf_output);
-                         richTextBox2.Text = result.ToString();
+                string output = cmd.StandardOutput.ReadToEnd();//获取CMD窗口输出信息
 
-                         cmd.WaitForExit();//等待程序退出
-                         cmd.Close();//程序结束后退出
-               }
+                cmd.WaitForExit();//等待程序退出
+                cmd.Close();//程序结束后退出
+            }
 
         }
 
@@ -316,29 +305,33 @@ namespace 爱校园
 
         private void button_发送自定义消息_Click(object sender, EventArgs e)
         {
-                MessageBox.Show("确定发送自定义CMD命令？（如果输入的是持续性命令，程序需要命令完成后才能显示结果，推荐使用系统自带的cmd）", "提示",
-                System.Windows.Forms.MessageBoxButtons.OK,
-                System.Windows.Forms.MessageBoxIcon.Warning);
-                System.Diagnostics.Process cmd = new System.Diagnostics.Process();
-                cmd.StartInfo.FileName = "cmd.exe";
-                cmd.StartInfo.UseShellExecute = false;//是否使用系统shell启动
-                cmd.StartInfo.RedirectStandardInput = true;//接受来自调用程序的输入信息
-                cmd.StartInfo.RedirectStandardOutput = true;//允许调用程序获取输出信息
-                cmd.StartInfo.RedirectStandardError = true;//重定向标准错误输出
-                cmd.StartInfo.CreateNoWindow = true;//是否隐藏程序窗口
-                cmd.Start();//启动程序
-                if (richTextBox1.Text == "")
-                {
-                    MessageBox.Show("请不要提交空命令！");
-                    cmd.Close();
-                }
-                else
-                {
+            MessageBox.Show("确定发送自定义CMD命令？（如果输入的是持续性命令，程序需要命令完成后才能显示结果，推荐使用系统自带的cmd）", "提示",
+            System.Windows.Forms.MessageBoxButtons.OK,
+            System.Windows.Forms.MessageBoxIcon.Warning);
+            System.Diagnostics.Process cmd = new System.Diagnostics.Process();
+            cmd.StartInfo.FileName = "cmd.exe";
+            cmd.StartInfo.UseShellExecute = false;//是否使用系统shell启动
+            cmd.StartInfo.RedirectStandardInput = true;//接受来自调用程序的输入信息
+            cmd.StartInfo.RedirectStandardOutput = true;//允许调用程序获取输出信息
+            cmd.StartInfo.RedirectStandardError = true;//重定向标准错误输出
+            cmd.StartInfo.CreateNoWindow = true;//是否隐藏程序窗口
+            cmd.Start();//启动程序
+            if (richTextBox1.Text == "")
+            {
+                MessageBox.Show("请不要提交空命令！");
+                cmd.Close();
+            }
+            else
+            {
 
                 cmd.StandardInput.WriteLine(richTextBox1.Text + "&exit");//向CMD发送指令
                 cmd.StandardInput.AutoFlush = true;//提交
 
                 string output = cmd.StandardOutput.ReadToEnd();//获取CMD窗口输出信息
+                Regex rex = new Regex(@"\{(.*)\}");//正则取返回结果
+                Match result = rex.Match(output);//取值后赋值
+                richTextBox2.Text = result.ToString();
+
                 richTextBox2.Text = output;
 
                 cmd.WaitForExit();//等待程序退出
@@ -363,7 +356,7 @@ namespace 爱校园
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             //点击"是(YES)"退出程序
-            DialogResult result = MessageBox.Show("确定要退出程序?", "安全提示",
+            DialogResult result = MessageBox.Show("确定要退出程序?", "提示",
                         System.Windows.Forms.MessageBoxButtons.OKCancel,
                        System.Windows.Forms.MessageBoxIcon.Warning);
             if (result == DialogResult.OK)
@@ -409,9 +402,9 @@ namespace 爱校园
             }
             else
                 if (result == DialogResult.Cancel)
-                {
-                    e.Cancel = true;
-                }
+            {
+                e.Cancel = true;
+            }
         }
         private void 隐藏窗口ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -482,7 +475,7 @@ namespace 爱校园
                 Regex rex = new Regex(@"\{(.*)\}");//正则取返回值
                 Match result = rex.Match(utf_output);//赋值
                 richTextBox2.Text = result.ToString();
-                richTextBox1.Text= "已向服务器发送下线session_id为"+textBox_session_id.Text+"，"+"IP地址为"+user_ip+"的设备的命令，请查看状态栏信息";
+                richTextBox1.Text = "已向服务器发送下线session_id为" + textBox_session_id.Text + "，" + "IP地址为" + user_ip + "的设备的命令，请查看状态栏信息";
 
                 cmd.WaitForExit();//等待程序退出
                 cmd.Close();//程序结束后退出
@@ -501,7 +494,7 @@ namespace 爱校园
             cmd.Start();//启动程序
             if (label_session_id_success.Text == "")
             {
-                MessageBox.Show("请先使用本程序成功登录获取ID！","警告");
+                MessageBox.Show("请先使用本程序成功登录获取ID！", "警告");
                 cmd.Close();
             }
             else
@@ -637,7 +630,7 @@ namespace 爱校园
 
                 }
             }
-                
+
         }
 
         private void richTextBox3_MouseDown(object sender, MouseEventArgs e)
@@ -647,7 +640,7 @@ namespace 爱校园
 
         private void button_查询学校_Click(object sender, EventArgs e)
         {
-            if(textBox_账号.Text==""||textBox_账号.Text.Length < 11)
+            if (textBox_账号.Text == "" || textBox_账号.Text.Length < 11)
             {
                 MessageBox.Show("请输入正确的手机号！");
             }
@@ -693,39 +686,39 @@ namespace 爱校园
 
         private void button_查询在线_Click(object sender, EventArgs e)
         {
-                System.Diagnostics.Process cmd = new System.Diagnostics.Process();
-                cmd.StartInfo.FileName = "cmd.exe";
-                cmd.StartInfo.UseShellExecute = false;//是否使用系统shell启动
-                cmd.StartInfo.RedirectStandardInput = true;//接受来自调用程序的输入信息
-                cmd.StartInfo.RedirectStandardOutput = true;//允许调用程序获取输出信息
-                cmd.StartInfo.RedirectStandardError = true;//重定向标准错误输出
-                cmd.StartInfo.CreateNoWindow = true;//是否隐藏程序窗口
-                cmd.Start();//启动程序
+            System.Diagnostics.Process cmd = new System.Diagnostics.Process();
+            cmd.StartInfo.FileName = "cmd.exe";
+            cmd.StartInfo.UseShellExecute = false;//是否使用系统shell启动
+            cmd.StartInfo.RedirectStandardInput = true;//接受来自调用程序的输入信息
+            cmd.StartInfo.RedirectStandardOutput = true;//允许调用程序获取输出信息
+            cmd.StartInfo.RedirectStandardError = true;//重定向标准错误输出
+            cmd.StartInfo.CreateNoWindow = true;//是否隐藏程序窗口
+            cmd.Start();//启动程序
 
-                string code_start = "curl -d \"req=";//命令字符串
-                string code_session_id_start = "%7B%22session_id%22%3A%22";
-                string session_id = label_session_id_success.Text;//session_id
-                string session_id_end = "%22%7D\"";
-                string server_ip = " " + "http://61.178.5.73/rasPortal/check.do";//查询服务器地址
+            string code_start = "curl -d \"req=";//命令字符串
+            string code_session_id_start = "%7B%22session_id%22%3A%22";
+            string session_id = label_session_id_success.Text;//session_id
+            string session_id_end = "%22%7D\"";
+            string server_ip = " " + "http://61.178.5.73/rasPortal/check.do";//查询服务器地址
 
-                StringBuilder id = new StringBuilder();
-                id.Append(code_start);
-                id.Append(code_session_id_start);
-                id.Append(session_id);
-                id.Append(session_id_end);
-                id.Append(server_ip);
+            StringBuilder id = new StringBuilder();
+            id.Append(code_start);
+            id.Append(code_session_id_start);
+            id.Append(session_id);
+            id.Append(session_id_end);
+            id.Append(server_ip);
 
-                richTextBox2.Text = "已向服务器查询session_id为" + label_session_id_success.Text + "的设备是否下线，具体请看下方返回信息";
-                cmd.StandardInput.WriteLine(id.ToString() + "&exit");//像CMD发送命令
-                cmd.StandardInput.AutoFlush = true;//提交
-                string output = cmd.StandardOutput.ReadToEnd();//获取CMD窗口输出信息
-                string utf_output = Encoding.UTF8.GetString(Encoding.Default.GetBytes(output));//转码输出信息
-                Regex rex = new Regex(@"\{(.*)\}");//正则取返回值
-                Match check_result = rex.Match(utf_output);//赋值
-                richTextBox3.Text = check_result.ToString();
+            richTextBox2.Text = "已向服务器查询session_id为" + label_session_id_success.Text + "的设备是否下线，具体请看下方返回信息";
+            cmd.StandardInput.WriteLine(id.ToString() + "&exit");//像CMD发送命令
+            cmd.StandardInput.AutoFlush = true;//提交
+            string output = cmd.StandardOutput.ReadToEnd();//获取CMD窗口输出信息
+            string utf_output = Encoding.UTF8.GetString(Encoding.Default.GetBytes(output));//转码输出信息
+            Regex rex = new Regex(@"\{(.*)\}");//正则取返回值
+            Match check_result = rex.Match(utf_output);//赋值
+            richTextBox3.Text = check_result.ToString();
 
-                cmd.WaitForExit();//等待程序退出
-                cmd.Close();//程序结束后退出
+            cmd.WaitForExit();//等待程序退出
+            cmd.Close();//程序结束后退出
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
