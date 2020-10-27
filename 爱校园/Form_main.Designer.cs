@@ -526,6 +526,7 @@
             // 
             // Form_main
             // 
+            this.AcceptButton = this.button_登录;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;

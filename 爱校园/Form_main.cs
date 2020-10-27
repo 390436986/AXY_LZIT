@@ -47,6 +47,7 @@ namespace 爱校园
 
         private void button_退出_Click(object sender, EventArgs e)
         {
+            this.Dispose();
             Application.Exit();
         }
 
