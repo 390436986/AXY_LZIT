@@ -750,10 +750,13 @@ namespace 爱校园
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("确认要清除认证信息吗？下次打开软件时将要求验证","警告",System.Windows.Forms.MessageBoxButtons.OKCancel);
-            Settings1.Default.IDcheck = false;
-            Settings1.Default.Save();
-            MessageBox.Show("认证信息已清除！","提示",System.Windows.Forms.MessageBoxButtons.OK);
+            DialogResult result = MessageBox.Show("确认要清除认证信息吗？下次打开软件时将要求验证","警告",System.Windows.Forms.MessageBoxButtons.OKCancel);
+            if (result == DialogResult.OK)
+            {
+                Settings1.Default.IDcheck = false;
+                Settings1.Default.Save();
+                MessageBox.Show("认证信息已清除！", "提示", System.Windows.Forms.MessageBoxButtons.OK);
+            }
         }
     }
 }

@@ -14,3 +14,4 @@ C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Release\爱�
 C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Release\爱校园.Form_main.resources
 C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Release\爱校园.Form_tip.resources
 C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Release\爱校园_工业学院.TrustInfo.xml
+C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Release\爱校园_工业学院.csprojAssemblyReference.cache
