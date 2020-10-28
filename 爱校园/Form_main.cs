@@ -317,7 +317,7 @@ namespace 爱校园
 
         private void button_发送自定义消息_Click(object sender, EventArgs e)
         {
-                MessageBox.Show("确定发送自定义CMD命令？（如果输入的是持续性命令，程序需要命令完成后才能显示结果，推荐使用系统自带的cmd）", "提示",
+                MessageBox.Show("确定发送自定义CMD命令？（该功能仅用于测试，如果输入的是持续性命令，程序需要命令完成后才能显示结果，推荐使用系统自带的cmd）", "提示",
                 System.Windows.Forms.MessageBoxButtons.OK,
                 System.Windows.Forms.MessageBoxIcon.Warning);
                 System.Diagnostics.Process cmd = new System.Diagnostics.Process();
@@ -716,7 +716,7 @@ namespace 爱校园
                 id.Append(session_id_end);
                 id.Append(server_ip);
 
-                richTextBox2.Text = "已向服务器查询session_id为" + label_session_id_success.Text + "的设备是否下线，具体请看下方返回信息";
+                richTextBox2.Text = "已向服务器查询session_id为\"" + label_session_id_success.Text + "\"的设备是否在线，请查看下方返回信息";
                 cmd.StandardInput.WriteLine(id.ToString() + "&exit");//像CMD发送命令
                 cmd.StandardInput.AutoFlush = true;//提交
                 string output = cmd.StandardOutput.ReadToEnd();//获取CMD窗口输出信息
