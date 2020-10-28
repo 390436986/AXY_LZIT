@@ -3,8 +3,6 @@ C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\bin\Debug\爱校园_�
 C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\bin\Debug\爱校园_工业学院.application
 C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\bin\Debug\爱校园_工业学院.exe
 C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\bin\Debug\爱校园_工业学院.pdb
-C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Debug\爱校园.Form1.resources
-C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Debug\爱校园.Form2.resources
 C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Debug\爱校园.Properties.Resources.resources
 C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Debug\爱校园_工业学院.csproj.GenerateResource.cache
 C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Debug\爱校园_工业学院.csproj.CoreCompileInputs.cache
@@ -12,4 +10,7 @@ C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Debug\爱校�
 C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Debug\爱校园_工业学院.application
 C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Debug\爱校园_工业学院.exe
 C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Debug\爱校园_工业学院.pdb
-C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Debug\爱校园_工业学院.csprojAssemblyReference.cache
+C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Debug\爱校园.Form_IDcheck.resources
+C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Debug\爱校园.Form_main.resources
+C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Debug\爱校园.Form_tip.resources
+C:\Users\Bystander\Source\Repos\JCFS-LT\AXY_LZIT\爱校园\obj\x86\Debug\爱校园_工业学院.TrustInfo.xml

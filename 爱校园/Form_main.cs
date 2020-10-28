@@ -743,6 +743,8 @@ namespace 爱校园
             Settings1.Default.last_success_session_id = "";
             Settings1.Default.user_name = "";
             Settings1.Default.password = "";
+            checkBox_保存密码.Checked = false;
+            checkBox_保存账号.Checked = false;
             richTextBox1.Text = "";
             richTextBox2.Text = "";
             richTextBox3.Text = "";

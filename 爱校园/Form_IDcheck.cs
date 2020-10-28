@@ -38,21 +38,6 @@ namespace 爱校园
                 Settings1.Default.Save();
                 
             }
-            /* if (textBox_ID.Text != "")
-            {
-                for (int i = 0; i <= ID.Length; i++)
-                {
-                    if (textBox_ID.Text == ID[i])
-                    {
-                        this.Close();
-                        new Form_main().ShowDialog();
-                        Settings1.Default.IDcheck = true;
-                        Settings1.Default.Save();
-                    }
-                }
-            }
-            else
-                MessageBox.Show("请输入ID！");*/
         }
 
         private void Form_IDcheck_FormClosing(object sender, FormClosingEventArgs e)
