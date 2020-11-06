@@ -18,4 +18,4 @@
 
 ## [联系作者](http://wpa.qq.com/msgrd?v=3&uin=3276735002&site=qq&menu=yes)（若发起临时会话失败可以直接加好友）
 
-## [第二版](https://github.com/JCFS-LT/AXY_2)
+### [第二版(Private)](https://github.com/JCFS-LT/AXY_2)
