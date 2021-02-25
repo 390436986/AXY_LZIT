@@ -15,7 +15,7 @@ namespace 爱校园
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_IDcheck());
+            Application.Run(new Form_main());
         }
     }
 }
