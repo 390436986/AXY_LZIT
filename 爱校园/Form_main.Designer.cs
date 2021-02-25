@@ -547,7 +547,6 @@
             this.button_checkidonline.TabIndex = 45;
             this.button_checkidonline.Text = "查询该ID是否在线";
             this.button_checkidonline.UseVisualStyleBackColor = true;
-            this.button_checkidonline.Click += new System.EventHandler(this.button_checkidonline_Click);
             // 
             // Form_main
             // 
