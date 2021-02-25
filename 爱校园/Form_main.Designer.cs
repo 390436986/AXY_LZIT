@@ -434,7 +434,7 @@
             this.linkLabel_contact.TabIndex = 34;
             this.linkLabel_contact.TabStop = true;
             this.linkLabel_contact.Text = " 联系作者(QQ)";
-            this.linkLabel_contact.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabel_contact.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_contact_LinkClicked);
             // 
             // button_get_sms_code
             // 

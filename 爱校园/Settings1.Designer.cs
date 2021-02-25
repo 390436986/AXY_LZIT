@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace 爱校园 {
+namespace Ischool {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.7.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
     internal sealed partial class Settings1 : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings1 defaultInstance = ((Settings1)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings1())));
@@ -50,12 +50,12 @@ namespace 爱校园 {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool bczh {
+        public bool save_account {
             get {
-                return ((bool)(this["bczh"]));
+                return ((bool)(this["save_account"]));
             }
             set {
-                this["bczh"] = value;
+                this["save_account"] = value;
             }
         }
         
@@ -98,36 +98,36 @@ namespace 爱校园 {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool login_type_SMS {
+        public bool login_type_sms {
             get {
-                return ((bool)(this["login_type_SMS"]));
+                return ((bool)(this["login_type_sms"]));
             }
             set {
-                this["login_type_SMS"] = value;
+                this["login_type_sms"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool login_type_PWD {
+        public bool login_type_pwd {
             get {
-                return ((bool)(this["login_type_PWD"]));
+                return ((bool)(this["login_type_pwd"]));
             }
             set {
-                this["login_type_PWD"] = value;
+                this["login_type_pwd"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool bcmm {
+        public bool save_pwd {
             get {
-                return ((bool)(this["bcmm"]));
+                return ((bool)(this["save_pwd"]));
             }
             set {
-                this["bcmm"] = value;
+                this["save_pwd"] = value;
             }
         }
         
@@ -140,6 +140,18 @@ namespace 爱校园 {
             }
             set {
                 this["IDcheck"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string auth_sms {
+            get {
+                return ((string)(this["auth_sms"]));
+            }
+            set {
+                this["auth_sms"] = value;
             }
         }
     }

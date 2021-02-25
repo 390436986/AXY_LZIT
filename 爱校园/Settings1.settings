@@ -8,7 +8,7 @@
     <Setting Name="password" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="bczh" Type="System.Boolean" Scope="User">
+    <Setting Name="save_account" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="last_success_ip" Type="System.String" Scope="User">
@@ -20,17 +20,20 @@
     <Setting Name="firs_boot" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="login_type_SMS" Type="System.Boolean" Scope="User">
+    <Setting Name="login_type_sms" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="login_type_PWD" Type="System.Boolean" Scope="User">
+    <Setting Name="login_type_pwd" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="bcmm" Type="System.Boolean" Scope="User">
+    <Setting Name="save_pwd" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="IDcheck" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="auth_sms" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>
