@@ -779,5 +779,46 @@ namespace 爱校园
             }
         }
 
+        private void button_checkidonline_Click(object sender, EventArgs e)
+        {
+            if (textBox_session_id.Text == "")
+            { MessageBox.Show("请输入要查询的session_id!", "提示", System.Windows.Forms.MessageBoxButtons.OK); }
+            else
+            {
+                System.Diagnostics.Process cmd = new System.Diagnostics.Process();
+                cmd.StartInfo.FileName = "cmd.exe";
+                cmd.StartInfo.UseShellExecute = false;//是否使用系统shell启动
+                cmd.StartInfo.RedirectStandardInput = true;//接受来自调用程序的输入信息
+                cmd.StartInfo.RedirectStandardOutput = true;//允许调用程序获取输出信息
+                cmd.StartInfo.RedirectStandardError = true;//重定向标准错误输出
+                cmd.StartInfo.CreateNoWindow = true;//是否隐藏程序窗口
+                cmd.Start();//启动程序
+
+                string code_start = "curl -d \"req=";//命令字符串
+                string code_session_id_start = "%7B%22session_id%22%3A%22";
+                string session_id = textBox_session_id.Text;//session_id
+                string session_id_end = "%22%7D\"";
+                string server_ip = " " + "http://61.178.5.73/rasPortal/check.do";//查询服务器地址
+
+                StringBuilder id = new StringBuilder();
+                id.Append(code_start);
+                id.Append(code_session_id_start);
+                id.Append(session_id);
+                id.Append(session_id_end);
+                id.Append(server_ip);
+
+                richTextBox_status_info.Text = "已向服务器查询session_id为" + textBox_session_id.Text + "的设备是否下线，具体请看下方返回信息";
+                cmd.StandardInput.WriteLine(id.ToString() + "&exit");//向CMD发送命令
+                cmd.StandardInput.AutoFlush = true;//提交
+                string output = cmd.StandardOutput.ReadToEnd();//获取CMD窗口输出信息
+                string utf_output = Encoding.UTF8.GetString(Encoding.Default.GetBytes(output));//转码输出信息
+                Regex rex = new Regex(@"\{(.*)\}");//正则取返回值
+                Match check_result = rex.Match(utf_output);//赋值
+                richTextBox_status_info2.Text = check_result.ToString();
+
+                cmd.WaitForExit();//等待程序退出
+                cmd.Close();//程序结束后退出
+            }
+        }
     }
 }
